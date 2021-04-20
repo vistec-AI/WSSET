@@ -1,11 +1,11 @@
 # Self-supervised Deep Metric Learning for Pointsets
-This is a TF2 implementation of paper: Self-supervised Deep Metric Learning for Pointsets, ICDE 2021. We proposed a novel deep representation learning technique for pointset using zero training labels called "Weighted Self-supervised EMD Triplet loss".
+This is a TF2 implementation of the paper: Self-supervised Deep Metric Learning for Pointsets, ICDE 2021. We proposed a novel deep representation learning technique for pointset using zero training labels called "Weighted Self-supervised EMD Triplet loss."
 
 ## Dataset preparation
 We follow Matthew J Kusner's paper "From Word Embeddings to Document Distances" by using set of word vectors dataset provided in [this repository](https://github.com/mkusner/wmd)
-and placing `.mat` files into `data/` folder. They also provided codes for converting a raw text data into set of word vectors too.
+and placing `.mat` files into `data/` folder. They also provided codes for converting raw text data into sets of word vectors too.
 
-Also, we need to calculate pairwise EMD for each sample in the dataset using python EMD module provided in [the same repository](https://github.com/mkusner/wmd/tree/master/python-emd-master) by converting the output in `.pk` into `.csv` and placing it inside `data/wmd/`.
+Also, we need to calculate pairwise EMD for each sample in the dataset using Python EMD module provided in [the same repository](https://github.com/mkusner/wmd/tree/master/python-emd-master) by converting the output in `.pk` into `.csv` and placing it inside `data/wmd/`.
 
 In this repository, we provided BBCSports dataset for both pointset data and calculated EMD as the example.
 
@@ -32,7 +32,7 @@ python train.py --dsname bbcsport --batchsize 32 --lr 1e-4 --epoch 1000  --loss 
 python train.py --dsname bbcsport --batchsize 32 --lr 1e-4 --epoch 1000  --loss triplet --treshold 5 --istransfer --loadmodel pretrained_bbcsport.h5
 ```
 You can set the flag to train in fine-tuning step by `--istransfer` and specify a directory of the pretrained model using `--loadmodel directory\model.h5`.
-We usually fine-tuning a model using `--loss ce` (crossentropy loss) and `--loss triplet` (semi-hard negative mining triplet loss), which require labels.
+We fine-tune a model using `--loss ce` (crossentropy loss) and `--loss triplet` (semi-hard negative mining triplet loss), which require labels.
 
 ## Cite and contact
 pattaramanee dot a underscore s19 at vistec dot ac dot th 
