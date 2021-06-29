@@ -1,5 +1,5 @@
 # Self-supervised Deep Metric Learning for Pointsets
-This is a TF2 implementation of the paper: Self-supervised Deep Metric Learning for Pointsets, ICDE 2021. We proposed a novel deep representation learning technique for pointset using zero training labels called "Weighted Self-supervised EMD Triplet loss."
+This is a TF2 implementation of the paper: Self-supervised Deep Metric Learning for Pointsets, ICDE 2021. We proposed a novel deep representation learning technique for pointset using zero training labels called "Weighted Self-supervised EMD Triplet loss." You can find the link of this paper [here](https://ieeexplore.ieee.org/document/9458827).
 
 ## Dataset preparation
 We follow Matthew J Kusner's paper "From Word Embeddings to Document Distances" by using set of word vectors dataset provided in [this repository](https://github.com/mkusner/wmd)
